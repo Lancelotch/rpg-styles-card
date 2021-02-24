@@ -3,7 +3,7 @@ body{
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     background: url("background.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -22,6 +22,9 @@ body{
     background: white;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
     text-align: center;
+
+    transition: 0.5s ease;
+    cursor: pointer;
 }
 
 .card-image {
@@ -68,8 +71,8 @@ body{
 
 .card-stats .stat {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     padding: 10px;
     color: white;
@@ -83,9 +86,19 @@ body{
 
 .card-stats .value {
     font-size: 22px;
+    font-weight: 500;
+}
+
+.card-stats .value sup {
+    font-size: 12px;
 }
 
 .card-stats .border {
     border-left: 1px solid rgb(172, 26, 87);
     border-right: 1px solid rgb(172, 26, 87);
+}
+
+.card:hover {
+    transform: scale(1.2);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0.6);
 }
